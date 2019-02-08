@@ -20,7 +20,7 @@ public class SecondActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.second_activity);
+        setContentView(R.layout.activity_second);
 
         nom = (TextView) findViewById(R.id.nom);
         prenom = (TextView) findViewById(R.id.prenom);
@@ -33,8 +33,8 @@ public class SecondActivity extends Activity {
         t = i.getStringExtra("tel");
 
         nom.setText(n);
-        nom.setText(p);
-        nom.setText(t);
+        prenom.setText(p);
+        tel.setText(t);
 
     }
 }
