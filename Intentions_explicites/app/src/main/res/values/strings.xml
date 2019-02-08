@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Intentions</string>
+    <string name="envoyer">envoyer</string>
+    <string name="nom">Nom</string>
+    <string name="prenom">Prenom</string>
+    <string name="tel">Telephone</string>
 </resources>

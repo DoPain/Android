@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IntentionsPart2</string>
+    <string name="modifier">modifier</string>
+    <string name="annuler">annuler</string>
+    <string name="infosPerso">Informations personnelles</string>
+    <string name="infosLog">Informations logement</string>
+    <string name="valider">valider</string>
+</resources>

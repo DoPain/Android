@@ -14,7 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:hint=""
+        android:hint="Nom"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,7 +27,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="88dp"
         android:ems="10"
-        android:hint=""
+        android:hint="Prenom"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +40,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="140dp"
         android:ems="10"
-        android:hint=""
+        android:hint="Telephone"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -52,7 +52,7 @@
         android:layout_marginLeft="80dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="452dp"
-        android:text="Envoyer"
+        android:text="@string/envoyer"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

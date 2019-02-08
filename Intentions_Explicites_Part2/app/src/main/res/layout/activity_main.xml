@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textTel"
+        android:layout_width="163dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:hint="Telephone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPrenom" />
+
+    <TextView
+        android:id="@+id/textPrenom"
+        android:layout_width="163dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:hint="Prenom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNom" />
+
+    <TextView
+        android:id="@+id/textNom"
+        android:layout_width="163dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="52dp"
+        android:hint="Nom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNumero"
+        android:layout_width="163dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="268dp"
+        android:hint="Numero rue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNomRue"
+        android:layout_width="163dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:hint="Nom rue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNumero" />
+
+    <TextView
+        android:id="@+id/textCP"
+        android:layout_width="163dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:hint="Code postal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNomRue" />
+
+    <TextView
+        android:id="@+id/textVille"
+        android:layout_width="163dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="16dp"
+        android:hint="Ville"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCP" />
+
+    <Button
+        android:id="@+id/modifier1"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="224dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="188dp"
+        android:text="@string/modifier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/modifier2"
+        android:layout_width="133dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="224dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="460dp"
+        android:text="@string/modifier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/infosPerso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="236dp"
+        android:text="@string/infosLog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
