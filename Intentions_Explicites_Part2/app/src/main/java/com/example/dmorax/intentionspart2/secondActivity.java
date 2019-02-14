@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -14,8 +15,8 @@ public class secondActivity extends Activity {
     TextView nom;
     TextView prenom;
     TextView tel;
-    Button valider1;
-    Button annuler1;
+    Button validerSecond;
+    Button annulerSecond;
 
 
     @Override
@@ -27,22 +28,22 @@ public class secondActivity extends Activity {
         prenom = (TextView) findViewById(R.id.editPrenom);
         tel = (TextView) findViewById(R.id.editTel);
 
-        valider1 = (Button) findViewById(R.id.valider);
-        annuler1 = (Button) findViewById(R.id.annuler);
+        validerSecond = (Button) findViewById(R.id.valider);
+        annulerSecond = (Button) findViewById(R.id.annuler);
 
         Intent i = getIntent();
         nom.setText(i.getStringExtra("nom"));
         prenom.setText(i.getStringExtra("prenom"));
         tel.setText(i.getStringExtra("tel"));
 
-        valider1.setOnClickListener(new View.OnClickListener() {
+        validerSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 validerClic();
             }
         });
 
-        annuler1.setOnClickListener(new View.OnClickListener() {
+        annulerSecond.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 annulerClic();
@@ -51,13 +52,17 @@ public class secondActivity extends Activity {
     }
 
     public void validerClic(){
-        Intent i = new Intent(this,MainActivity.class);
+        Intent i = new Intent();
         i.putExtra("nom",nom.getText().toString());
         i.putExtra("prenom",prenom.getText().toString());
         i.putExtra("tel",tel.getText().toString());
+        setResult(RESULT_OK,i);
+        finish();
     }
 
     public void annulerClic(){
-
+        Intent i = new Intent();
+        setResult(RESULT_CANCELED,i);
+        finish();
     }
 }

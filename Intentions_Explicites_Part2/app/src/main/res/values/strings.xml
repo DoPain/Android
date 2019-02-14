@@ -5,4 +5,11 @@
     <string name="infosPerso">Informations personnelles</string>
     <string name="infosLog">Informations logement</string>
     <string name="valider">valider</string>
+    <string name="nom">Jean</string>
+    <string name="prenom">Kemar</string>
+    <string name="tel">0698564512</string>
+    <string name="NumRue">06</string>
+    <string name="NomRue">Rue des orchidees</string>
+    <string name="CP">33650</string>
+    <string name="Ville">Martillac</string>
 </resources>
