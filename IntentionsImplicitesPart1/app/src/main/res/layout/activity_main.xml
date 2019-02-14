@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonSms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="128dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="112dp"
+        android:text="@string/sms"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mms"
+        app:layout_constraintEnd_toEndOf="@+id/buttonSms"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSms" />
+
+    <Button
+        android:id="@+id/buttonAppel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appel"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMms"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMms" />
+
+    <Button
+        android:id="@+id/buttonWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/web"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAppel"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAppel" />
+
+    <Button
+        android:id="@+id/buttonMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/map"
+        app:layout_constraintEnd_toEndOf="@+id/buttonWeb"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWeb" />
+</android.support.constraint.ConstraintLayout>
