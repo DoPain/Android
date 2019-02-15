@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -37,37 +36,68 @@ public class MainActivity extends Activity {
         mms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickButton(mms);
+                onClickButtonMms();
             }
         });
         appel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickButton(appel);
+                onClickButtonCall();
             }
         });
         web.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickButton(web);
+                onClickButtonWeb();
             }
         });
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickButton(map);
+                onClickButtonMap();
             }
         });
     }
 
-    public void onClickButton(Button b){
-        System.out.println(b.getText().toString());
-    }
 
     public void onClickButtonSms(){
-        Intent intention = new Intent(Intent.ACTION_SENDTO) ;
         Uri smsU = Uri.parse("sms:06000007") ;
-        intention.setData(smsU);
+        Intent i = new Intent(Intent.ACTION_SENDTO,smsU) ;
+        i.putExtra("sms_body","Enter your sms here..");
+        startActivity(i);
+        finish();
+    }
+
+    public void onClickButtonMms(){
+        Uri smsU = Uri.parse("sms:06000007") ;
+        Intent i = new Intent(Intent.ACTION_SENDTO,smsU) ;
+        i.putExtra("sms_body","Put your image here..");
+        startActivity(i);
+        finish();
+    }
+
+    public void onClickButtonCall(){
+        String number = "0671021541";
+        Uri call = Uri.parse("tel:" + number) ;
+        Intent intention = new Intent(Intent.ACTION_DIAL,call) ;
         startActivity(intention);
+        finish();
+    }
+
+    public void onClickButtonWeb(){
+        String url = "http://www.facebook.com";
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+        startActivity(i);
+        finish();
+    }
+
+    public void onClickButtonMap(){
+        String location = "geo:0,0?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA+94043";
+        Uri loc = Uri.parse(location) ;
+        Intent i = new Intent(Intent.ACTION_VIEW,loc) ;
+        i.setPackage("com.google.android.apps.maps");
+        startActivity(i);
+        finish();
     }
 }
