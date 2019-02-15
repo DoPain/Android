@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
 
@@ -14,6 +15,11 @@ public class MainActivity extends Activity {
     Button appel;
     Button web;
     Button map;
+
+    EditText phoneN;
+    EditText urlWebSite;
+    EditText longi;
+    EditText lat;
 
 
     @Override
@@ -26,6 +32,11 @@ public class MainActivity extends Activity {
         appel = (Button) findViewById(R.id.buttonAppel);
         web = (Button) findViewById(R.id.buttonWeb);
         map = (Button) findViewById(R.id.buttonMap);
+
+        phoneN = (EditText) findViewById(R.id.editPhone);
+        urlWebSite = (EditText) findViewById(R.id.editUrl);
+        longi = (EditText) findViewById(R.id.editLongitude);
+        lat = (EditText) findViewById(R.id.editLatitude);
 
         sms.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +72,7 @@ public class MainActivity extends Activity {
 
 
     public void onClickButtonSms(){
-        Uri smsU = Uri.parse("sms:06000007") ;
+        Uri smsU = Uri.parse("smsto:"+ phoneN.getText().toString()) ;
         Intent i = new Intent(Intent.ACTION_SENDTO,smsU) ;
         i.putExtra("sms_body","Enter your sms here..");
         startActivity(i);
@@ -69,7 +80,7 @@ public class MainActivity extends Activity {
     }
 
     public void onClickButtonMms(){
-        Uri smsU = Uri.parse("sms:06000007") ;
+        Uri smsU = Uri.parse("smsto:"+phoneN.getText().toString()) ;
         Intent i = new Intent(Intent.ACTION_SENDTO,smsU) ;
         i.putExtra("sms_body","Put your image here..");
         startActivity(i);
@@ -77,15 +88,14 @@ public class MainActivity extends Activity {
     }
 
     public void onClickButtonCall(){
-        String number = "0671021541";
-        Uri call = Uri.parse("tel:" + number) ;
+        Uri call = Uri.parse("tel:" + phoneN.getText().toString()) ;
         Intent intention = new Intent(Intent.ACTION_DIAL,call) ;
         startActivity(intention);
         finish();
     }
 
     public void onClickButtonWeb(){
-        String url = "http://www.facebook.com";
+        String url = urlWebSite.getText().toString();
         Intent i = new Intent(Intent.ACTION_VIEW);
         i.setData(Uri.parse(url));
         startActivity(i);
@@ -93,8 +103,7 @@ public class MainActivity extends Activity {
     }
 
     public void onClickButtonMap(){
-        String location = "geo:0,0?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA+94043";
-        Uri loc = Uri.parse(location) ;
+        Uri loc = Uri.parse("geo:" + lat.getText().toString() +","+ longi.getText().toString()) ;
         Intent i = new Intent(Intent.ACTION_VIEW,loc) ;
         i.setPackage("com.google.android.apps.maps");
         startActivity(i);
