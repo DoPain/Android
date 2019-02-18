@@ -1,0 +1,5 @@
+Bonjour,
+
+Je n'ai pas pu faire le tp11 et le tp12 ce weekend car Gradle ne voulait pas s'installer sur ma machine personnelle. C'est donc pour cela qu'ils n'apparaissent pas sur mon git.
+
+Merci de votre compréhension.
