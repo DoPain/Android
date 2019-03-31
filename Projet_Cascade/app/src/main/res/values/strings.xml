@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Cascade</string>
+    <string name="diffText">Difficulté</string>
+    <string name="go">GO !</string>
+    <string name="MeilleurScore">Meilleur score</string>
+    <string name="niv1">Niveau 1 :</string>
+    <string name="niv2">Niveau 2 :</string>
+    <string name="niv3">Niveau 3 :</string>
+    <string name="niv4">Niveau 4 :</string>
+    <string name="niv5">Niveau 5 :</string>
+
+
+</resources>
